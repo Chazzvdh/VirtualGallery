@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+#user-info {
+    margin-top: 20px;
+    width: 400px;
+    margin: 0 auto;
+}
+
+.user {
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.user h2 {
+    margin: 0;
+    color: #333;
+}
+
+.user p {
+    margin: 5px 0;
+    color: #666;
+}

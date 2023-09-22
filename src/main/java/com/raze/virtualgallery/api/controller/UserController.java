@@ -20,8 +20,7 @@ public class UserController {
 
     @GetMapping("/all")
     public List<User> getAllUsers() {
-        System.out.println("Getting all users...");
-        System.out.println(userService.getAllUsers());
+        System.out.println(String.format("Getting user request from client %s, getting all users.", userService.getClass().getSimpleName()));
         return userService.getAllUsers();
     }
 
