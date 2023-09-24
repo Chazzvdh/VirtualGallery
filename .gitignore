@@ -33,5 +33,7 @@ build/
 .vscode/
 
 ## application.properties ##
-src/main/resources/application-secrets.properties
+# Exclude application secrets file
+application-secrets.properties
+
 
