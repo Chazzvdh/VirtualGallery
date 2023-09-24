@@ -1,33 +1,155 @@
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-}
+/* Import external resources */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
 
-h1 {
-    color: #333;
-}
-
-#user-info {
-    margin-top: 20px;
-    width: 400px;
-    margin: 0 auto;
-}
-
-.user {
-    background-color: #f4f4f4;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 10px;
-    margin-bottom: 10px;
-    text-align: left;
-}
-
-.user h2 {
+/* Global Styles */
+* {
+    box-sizing: border-box;
     margin: 0;
-    color: #333;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: #ecf0f1;
 }
 
-.user p {
-    margin: 5px 0;
-    color: #666;
+body {
+    background-color: #24252A;
 }
+
+/* Grid Container */
+#grid_container {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 1fr auto 1fr;
+    grid-template-areas:
+        "header header header"
+        "menu main side"
+        "footer footer footer";
+}
+
+/* Main Content */
+#main {
+    grid-area: main;
+    min-height: 100vh;
+    background-color: #3c3e46;
+    padding: 20px;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+
+/* Header Styles */
+#header {
+    grid-area: header;
+    position: fixed;
+    width: 100%;
+    background-color: #24252A;
+    padding: 20px;
+}
+
+#menu  {
+    grid-area: menu;
+    background-color: #3c3e46;
+
+}
+
+#side {
+    grid-area: side;
+    background-color: #3c3e46;
+}
+
+/* Centered Content */
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo Styles */
+.logo {
+    cursor: pointer;
+    width: 105px;
+}
+
+/* Navigation Links */
+.nav__links {
+    list-style: none;
+    margin: 0; /* Remove default list margin */
+    padding: 0;
+}
+
+.nav__links li {
+    display: inline-block;
+    margin-right: 20px; /* Adjust spacing between links */
+}
+
+.nav__links li:last-child {
+    margin-right: 0; /* Remove margin from the last link */
+}
+
+.nav__links li a {
+    text-decoration: none;
+    color: #ecf0f1;
+    transition: color 0.3s ease;
+}
+
+.nav__links li a:hover {
+    color: #0088a9;
+}
+
+/* Buttons */
+button {
+    padding: 20px 30px;
+    background-color: rgba(0, 136, 169, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#login__button {
+    padding: 10px 30px;
+}
+
+/* Search Button */
+#search__button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 20px 25px;
+    border-radius: 50%;
+    background-color: rgba(0, 136, 169, 1);
+    transition: background-color 0.3s ease;
+}
+
+/* Hover Styles for Buttons */
+button:hover, #search__button:hover {
+    background-color: rgba(0, 136, 169, 0.8);
+}
+
+/* Footer Styles */
+#footer {
+    grid-area: footer;
+    text-align: center;
+    color: #585b67;
+    padding: 20px;
+}
+
+/* Add CSS for the panels inside the content__container */
+#content__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Create three columns */
+    gap: 20px; /* Add gap between the panels */
+    padding: 20px; /* Add padding for spacing inside the container */
+}
+
+.panel {
+    background-color: #585b67; /* Panel background color */
+    padding: 20px; /* Add padding to the panels */
+    /*border: 1px solid #dddddd; !* Add borders to the panels *!*/
+    border-bottom: 3px solid #24252a;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1); /* Add shadow for a card-like effect */
+}
+
