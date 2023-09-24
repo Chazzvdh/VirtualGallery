@@ -26,43 +26,34 @@ function getRandomDimensions(min, max) {
     return { width, height };
 }
 
-// Function to create random data for a panel
-function generateRandomPanelData() {
+// Function to create a panel with random data
+function createRandomPanel() {
     const dimensions = getRandomDimensions(200, 400);
     const imageUrl = `https://placekitten.com/${dimensions.width}/${dimensions.height}`;
     const title = `Kitten ${Math.floor(Math.random() * 100)}`;
     const description = `A random cute kitten with dimensions ${dimensions.width}x${dimensions.height}`;
-    return { imageUrl, title, description };
-}
 
-// Function to create a panel with random data
-function createRandomPanel() {
-    const randomData = generateRandomPanelData();
-    return createPanel(randomData.imageUrl, randomData.title, randomData.description);
-}
-
-// Function to create a panel with image, title, and description
-function createPanel(imageUrl, title, description) {
     const panel = document.createElement("div");
     panel.classList.add("panel");
 
-    // Create an image element
     const img = document.createElement("img");
     img.src = imageUrl;
     img.alt = title;
 
-    // Create a title element
+    const panelContent = document.createElement("div");
+    panelContent.classList.add("panel-content");
+
     const panelTitle = document.createElement("h2");
     panelTitle.textContent = title;
 
-    // Create a description element
     const panelDescription = document.createElement("p");
     panelDescription.textContent = description;
 
-    // Append elements to the panel
+    panelContent.appendChild(panelTitle);
+    panelContent.appendChild(panelDescription);
+
     panel.appendChild(img);
-    panel.appendChild(panelTitle);
-    panel.appendChild(panelDescription);
+    panel.appendChild(panelContent);
 
     return panel;
 }
@@ -75,6 +66,3 @@ for (let i = 0; i < 10; i++) {
     const panel = createRandomPanel();
     contentContainer.appendChild(panel);
 }
-
-
-

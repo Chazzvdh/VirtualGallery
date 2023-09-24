@@ -139,17 +139,35 @@ button:hover, #search__button:hover {
 /* Add CSS for the panels inside the content__container */
 #content__container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Create three columns */
+    grid-template-columns: repeat(1, 1fr); /* Create two columns */
     gap: 20px; /* Add gap between the panels */
     padding: 20px; /* Add padding for spacing inside the container */
 }
 
 .panel {
     background-color: #585b67; /* Panel background color */
-    padding: 20px; /* Add padding to the panels */
-    /*border: 1px solid #dddddd; !* Add borders to the panels *!*/
-    border-bottom: 3px solid #24252a;
-    border-radius: 10px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1); /* Add shadow for a card-like effect */
+    display: flex;
+    border-radius: 10px;
+    flex-direction: column; /* Stack children vertically */
 }
 
+.panel-content {
+    padding: 20px;
+    flex-grow: 1; /* Allow content to grow and take remaining space */
+}
+
+.panel img {
+    border-radius: 10px;
+    max-width: 100%; /* Ensure the image doesn't overflow the panel */
+}
+
+/* Additional styling for title and description */
+.panel h2 {
+    margin-top: 10px; /* Add some spacing above the title */
+}
+
+.panel p {
+    margin-top: auto; /* Push the description to the bottom */
+    margin-bottom: 20px; /* Add some spacing below the description */
+}
