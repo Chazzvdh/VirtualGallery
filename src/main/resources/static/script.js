@@ -32,9 +32,14 @@ function createRandomPanel() {
     const imageUrl = `https://placekitten.com/${dimensions.width}/${dimensions.height}`;
     const title = `Kitten ${Math.floor(Math.random() * 100)}`;
     const description = `A random cute kitten with dimensions ${dimensions.width}x${dimensions.height}`;
+    const user = `User ${Math.floor(Math.random() * 100)}`;
 
     const panel = document.createElement("div");
     panel.classList.add("panel");
+
+    const userPanel = document.createElement("div");
+    userPanel.classList.add("user-panel");
+    userPanel.textContent = user;
 
     const img = document.createElement("img");
     img.src = imageUrl;
@@ -52,6 +57,7 @@ function createRandomPanel() {
     panelContent.appendChild(panelTitle);
     panelContent.appendChild(panelDescription);
 
+    panel.appendChild(userPanel);
     panel.appendChild(img);
     panel.appendChild(panelContent);
 

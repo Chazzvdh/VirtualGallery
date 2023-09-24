@@ -1,6 +1,5 @@
 /* Import external resources */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
 
 /* Global Styles */
 * {
@@ -13,7 +12,7 @@
 }
 
 body {
-    background-color: #24252A;
+    background-color: #3c3e46;
 }
 
 /* Grid Container */
@@ -46,6 +45,9 @@ body {
     width: 100%;
     background-color: #24252A;
     padding: 20px;
+    /* make header slight transparent so content shows under it using gradient using the same colors*/
+    background: linear-gradient(rgba(36, 37, 42, 1), rgba(36, 37, 42, 0.8));
+
 }
 
 #menu  {
@@ -69,7 +71,7 @@ body {
 /* Logo Styles */
 .logo {
     cursor: pointer;
-    width: 105px;
+    width: 150px;
 }
 
 /* Navigation Links */
@@ -110,13 +112,14 @@ button {
 
 #login__button {
     padding: 10px 30px;
+    margin-left: 50px;
 }
 
 /* Search Button */
 #search__button {
     position: fixed;
-    bottom: 30px;
-    right: 30px;
+    bottom: 20px;
+    right: 20px;
     padding: 20px 25px;
     border-radius: 50%;
     background-color: rgba(0, 136, 169, 1);
@@ -132,7 +135,7 @@ button:hover, #search__button:hover {
 #footer {
     grid-area: footer;
     text-align: center;
-    color: #585b67;
+    background-color: #24252A;
     padding: 20px;
 }
 
@@ -141,7 +144,10 @@ button:hover, #search__button:hover {
     display: grid;
     grid-template-columns: repeat(1, 1fr); /* Create two columns */
     gap: 20px; /* Add gap between the panels */
-    padding: 20px; /* Add padding for spacing inside the container */
+}
+
+.user-panel {
+    padding: 10px;
 }
 
 .panel {
@@ -158,8 +164,10 @@ button:hover, #search__button:hover {
 }
 
 .panel img {
-    border-radius: 10px;
+    padding: 10px;
+    border-radius: 20px;
     max-width: 100%; /* Ensure the image doesn't overflow the panel */
+    /* make the image transparent */
 }
 
 /* Additional styling for title and description */
