@@ -1,0 +1,38 @@
+.line {
+    display: flex;
+    justify-content: space-between;
+}
+
+.word {
+    color: white;
+    font-size: 5rem;
+    font-family: "Rubik", sans-serif;
+    margin: 0rem;
+    text-transform: uppercase;
+    transition: opacity 0.5s ease;
+}
+
+
+/*change font size of .word where it has link as class*/
+.word.link {
+    font-size: 20px;
+    color: rgb(89, 220, 255);
+}
+
+a {
+    text-decoration: none;
+}
+#text {
+    padding-bottom: 100px;
+}
+#text:has(.fancy:hover) .word:not(.fancy:hover) {
+    opacity: 0.2;
+}
+
+.word .fancy. .link {
+    color: #0088a9;
+}
+
+.fancy span {
+    display: inline-block;
+}
