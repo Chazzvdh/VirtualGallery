@@ -8,7 +8,7 @@
     padding: 0;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
-    color: #ecf0f1;
+    /*color: #ecf0f1;*/
 }
 
 body {
@@ -25,6 +25,7 @@ body {
     radial-gradient(35% 56% at 91% 74%, #8A4FFFF5 9%, #073AFF00 100%),
     radial-gradient(74% 86% at 67% 38%, #6DFFAEF5 24%, #073AFF00 100%),
     linear-gradient(125deg, #4EB5FFFF 1%, #4C00FCFF 100%);
+    color: white;
 }
 
 /* Grid Container */
@@ -131,14 +132,14 @@ button {
     bottom: 20px;
     right: 20px;
     padding: 20px 25px;
-    border-radius: 50%;
-    background-color: rgba(0, 136, 169, 1);
+    background-color: rgb(255, 255, 255);
     transition: background-color 0.3s ease;
+    color: black;
 }
 
 /* Hover Styles for Buttons */
 button:hover, #search__button:hover {
-    background-color: rgba(0, 136, 169, 0.8);
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
 /* Footer Styles */
