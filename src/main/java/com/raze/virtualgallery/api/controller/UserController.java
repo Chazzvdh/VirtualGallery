@@ -29,7 +29,7 @@ public class UserController {
         User createdUser = userService.registerUser(request.getUsername(), request.getEmail(), request.getPassword());
 
         // Create a custom success message with user information
-
+        System.out.println(String.format("Registering user request from client %s, user created successfully with this information: %s", userService.getClass().getSimpleName(), createdUser.toString()));
         return "User created successfully with this information: " + createdUser.toString();
     }
 
