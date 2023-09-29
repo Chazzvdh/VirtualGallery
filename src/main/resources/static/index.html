@@ -2,69 +2,75 @@
 <html>
 <head>
     <title>Home - Virtuart</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="fancy.css">
+    <link rel="stylesheet" href="circle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <div class="grid_container" id="frontpage">
-        <div id="header">
+<div id="grid_container">
+    <div id="header">
         <header class="header-content">
-                <a href="index.html"><img class="logo" src="./images/logo.png" alt="virtuart logo"></a>
-                <nav>
-                    <ul class="nav__links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="#">Artists</a></li>
-                        <li><a href="#">Shop</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </nav>
-                <a class="cta" href="#"><button id="login__button">Login</button></a>
-            </header>
-        </div>
+            <a href="index.html"><img class="logo" src="./images/logo.png" alt="virtuart logo"></a>
+            <nav>
+                <ul class="nav__links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="#">Artists</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <a class="cta" href="#"><button id="login__button">Login</button></a>
+        </header>
+    </div>
 
-<!--        <div id="menu"></div>-->
+    <div id="menu"></div>
 
-        <div id="main">
-            <div id="text">
-                <div class="line">
-                    <p class="word fancy"><a href="gallery.html">DISCOVERY.</a></p>
-                    <p class="word fancy"><a href="create.html">CREATE. </a></p>
-                    <p class="word fancy"><a href="share.html">SHARE. </a></p>
-                </div>
+    <div id="main">
+        <div class="gradient-element"></div>
+        <div id="text">
+            <div class="line">
+                <p class="word fancy"><a href="gallery.html">DISCOVERY.</a></p>
+                <p class="word fancy"><a href="create.html">CREATE. </a></p>
+                <p class="word fancy"><a href="share.html">SHARE. </a></p>
+            </div>
 
-                <div class="line">
-                    <p class="word">BORDERLESS ART &</p>
-                </div>
+            <div class="line">
+                <p class="word">BOUNDLESS ART</p>
+            </div>
 
-                <div class="line">
-                    <p class="word">a Digital media hub</p>
-                </div>
+            <div class="line">
+                <p class="word">a Digital media hub</p>
+            </div>
 
-                <div class="line">
-                    <a
-                            id="channel-link"
-                            href="https://instagram.com"
-                            target="_blank"
-                            class="word fancy link"
-                    >
-                        @Virtuartgallery
-                    </a>
-                </div>
+            <div class="line">
+                <a
+                        id="channel-link"
+                        href="https://instagram.com"
+                        target="_blank"
+                        class="word fancy link"
+                >
+                    @Virtuartgallery
+                </a>
             </div>
         </div>
 
-        <div id="side">
-
-        </div>
-
-        <div id="footer">
-            <img class="logo" src="./images/logo.png" alt="virtuart logo">
-            <p>2023 RAZE. All Rights Reserved.</p>
-        </div>
+        <!-- Circle element is placed here under the text -->
+        <span id="circle" class="circle"></span>
     </div>
-    <button id="search__button">Search</button>
+
+    <div id="side"></div>
+
+    <div id="footer">
+        <img class="logo" src="./images/logo.png" alt="virtuart logo">
+        <p>2023 RAZE. All Rights Reserved.</p>
+    </div>
+</div>
+<button id="search__button">Search</button>
 <script src="script.js"></script>
+<script src="circle.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </body>
 </html>

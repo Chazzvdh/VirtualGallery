@@ -1,0 +1,10 @@
+.circle {
+
+    position: absolute;
+    z-index: -1;
+    /*Circle of 200px with a radial gradient from the middle with lime green to none*/
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(18% 28% at 24% 50%, rgba(211, 255, 109, 0.61) 7%, #073AFF00 100%);
+}
