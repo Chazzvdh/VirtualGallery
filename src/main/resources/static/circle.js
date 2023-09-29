@@ -2,11 +2,11 @@
 document.addEventListener("DOMContentLoaded", function () {
     var mouseX = 0, mouseY = 0;
     var xp = 0, yp = 0;
-    var circle = document.getElementById("circle");
+    var circle = document.querySelector(".circle");
 
     document.addEventListener("mousemove", function(e) {
-        mouseX = e.pageX - 100;
-        mouseY = e.pageY - 100;
+        mouseX = e.pageX - 500;
+        mouseY = e.pageY - 500;
     });
 
     setInterval(function() {
@@ -14,5 +14,5 @@ document.addEventListener("DOMContentLoaded", function () {
         yp += ((mouseY - yp) / 6);
         circle.style.left = xp + "px";
         circle.style.top = yp + "px";
-    }, 20);
+    }, 5);
 });
