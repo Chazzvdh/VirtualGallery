@@ -10,15 +10,14 @@
     margin: 0rem;
     text-transform: uppercase;
     transition: opacity 0.5s ease;
-    filter: drop-shadow(0px 5px 3px rgba(0, 0, 0, 0.2));
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.2));
 }
 
 
 /*change font size of .word where it has link as class*/
 .word.link {
     font-size: 20px;
-    color: #696970;
-    filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.2));
+    color: #4EB5FFFF;
 }
 
 a {

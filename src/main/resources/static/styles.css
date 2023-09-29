@@ -1,0 +1,192 @@
+/* Import external resources */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    /*color: #ecf0f1;*/
+}
+
+body {
+    background-size: 100% 100%;
+    background-position: 0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px;
+    background-image: radial-gradient(18% 28% at 24% 50%, rgba(211, 255, 109, 0.61) 7%, #073AFF00 100%),
+    radial-gradient(18% 28% at 18% 71%, #FFFFFF59 6%, #073AFF00 100%),
+    radial-gradient(70% 53% at 36% 76%, #73F2FFFF 0%, #073AFF00 100%),
+    radial-gradient(42% 53% at 15% 94%, #FFFFFFFF 7%, #073AFF00 100%),
+    radial-gradient(42% 53% at 34% 72%, #FFFFFFFF 7%, #073AFF00 100%),
+    radial-gradient(18% 28% at 35% 87%, #FFFFFFFF 7%, #073AFF00 100%),
+    radial-gradient(31% 43% at 7% 98%, #FFFFFFFF 24%, #073AFF00 100%),
+    radial-gradient(21% 37% at 72% 23%, #D3FF6D9C 24%, #073AFF00 100%),
+    radial-gradient(35% 56% at 91% 74%, #8A4FFFF5 9%, #073AFF00 100%),
+    radial-gradient(74% 86% at 67% 38%, #6DFFAEF5 24%, #073AFF00 100%),
+    linear-gradient(125deg, #4EB5FFFF 1%, #4C00FCFF 100%);
+    color: white;
+}
+
+/* Grid Container */
+#grid_container {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 1fr auto 1fr;
+    grid-template-areas:
+        "header header header"
+        "menu main side"
+        "footer footer footer";
+}
+
+/* Main Content */
+#main {
+    grid-area: main;
+    min-height: 100vh;
+    /*padding: 20px;*/
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+
+/* Header Styles */
+#header {
+    grid-area: header;
+    position: fixed;
+    width: 100%;
+    background-color: #24252A;
+    padding: 20px;
+    /* make header slight transparent so content shows under it using gradient using the same colors*/
+    background: linear-gradient(rgba(36, 37, 42, 1), rgba(36, 37, 42, 0.8));
+
+}
+
+#menu  {
+    grid-area: menu;
+}
+
+#side {
+    grid-area: side;
+}
+
+/* Centered Content */
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo Styles */
+.logo {
+    cursor: pointer;
+    width: 150px;
+}
+
+/* Navigation Links */
+.nav__links {
+    list-style: none;
+    margin: 0; /* Remove default list margin */
+    padding: 0;
+    display: flex;
+}
+
+.nav__links li {
+    display: inline-block;
+    margin-right: 50px; /* Adjust spacing between links */
+}
+
+.nav__links li:last-child {
+    margin-right: 0; /* Remove margin from the last link */
+}
+
+.nav__links li a {
+    text-decoration: none;
+    color: #ecf0f1;
+    transition: color 0.3s ease;
+}
+
+.nav__links li a:hover {
+    color: rgba(211, 255, 109, 0.61);
+}
+
+/* Buttons */
+button {
+    padding: 20px 30px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#login__button {
+    padding: 10px 30px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+/* Search Button */
+#search__button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 20px 25px;
+    background-color: rgb(255, 255, 255);
+    transition: background-color 0.3s ease;
+    color: black;
+}
+
+/* Hover Styles for Buttons */
+button:hover, #search__button:hover {
+    background-color: rgba(211, 255, 109, 0.61)
+}
+
+/* Footer Styles */
+#footer {
+    grid-area: footer;
+    text-align: center;
+    background-color: #24252A;
+    padding: 20px;
+}
+
+/* Add CSS for the panels inside the content__container */
+#content__container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* Create two columns */
+    gap: 20px; /* Add gap between the panels */
+}
+
+.user-panel {
+    padding: 10px;
+}
+
+.panel {
+    background-color: #585b67; /* Panel background color */
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1); /* Add shadow for a card-like effect */
+    display: flex;
+    border-radius: 10px;
+    flex-direction: column; /* Stack children vertically */
+}
+
+.panel-content {
+    padding: 20px;
+    flex-grow: 1; /* Allow content to grow and take remaining space */
+}
+
+.panel img {
+    padding: 10px;
+    border-radius: 20px;
+    max-width: 100%; /* Ensure the image doesn't overflow the panel */
+    /* make the image transparent */
+}
+
+/* Additional styling for title and description */
+.panel h2 {
+    margin-top: 10px; /* Add some spacing above the title */
+}
+
+.panel p {
+    margin-top: auto; /* Push the description to the bottom */
+    margin-bottom: 20px; /* Add some spacing below the description */
+}
