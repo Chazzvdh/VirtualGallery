@@ -1,0 +1,31 @@
+/* Buttons */
+button {
+    padding: 20px 30px;
+    background-color: rgba(0, 136, 169, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#login__button {
+    padding: 10px 30px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+/* Search Button */
+#search__button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 20px 25px;
+    background-color: rgb(255, 255, 255);
+    transition: background-color 0.3s ease;
+    color: black;
+}
+
+/* Hover Styles for Buttons */
+button:hover, #search__button:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}

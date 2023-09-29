@@ -1,0 +1,13 @@
+/* Logo Styles */
+.logo {
+    cursor: pointer;
+    width: 150px;
+}
+
+/* Navigation Links */
+.nav__links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}

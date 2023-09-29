@@ -1,0 +1,44 @@
+/* Main Content */
+#main {
+    grid-area: main;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Header Styles */
+#header {
+    grid-area: header;
+    position: fixed;
+    width: 100%;
+    background-color: #24252A;
+    padding: 20px;
+    background: linear-gradient(rgba(36, 37, 42, 1), rgba(36, 37, 42, 0.8));
+}
+/* Centered Content */
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* Menu and Side Styles */
+#menu {
+    grid-area: menu;
+}
+
+#side {
+    grid-area: side;
+}
+
+/* Footer Styles */
+#footer {
+    grid-area: footer;
+    text-align: center;
+    background-color: #24252A;
+    padding: 20px;
+}
+
+
+
